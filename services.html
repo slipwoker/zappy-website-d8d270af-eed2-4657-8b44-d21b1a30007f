@@ -1,0 +1,628 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שירותי טיפול הוליסטי מקצועיים — תחת השם הפרטי</title>
+  <meta name="description" content="גלי את מגוון שירותי הטיפול ההוליסטי גוף נפש ונשמה שלנו. מטפלת הוליסטית בישראל מציעה טיפולים מותאמים אישית למסע שלך להרמוניה ואיזון.">
+  <meta name="keywords" content="טיפול הוליסטי, מטפלת הוליסטית בישראל, טיפול הוליסטי גוף נפש ונשמה, שירותי טיפול הוליסטי">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: static;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: 'd8d270af-eed2-4657-8b44-d21b1a30007f',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="assets/logo.webp" alt="תחת השם הפרטי" class="logo" />
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="פתח תפריט">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      
+      <button class="phone-header-btn" aria-label="התקשרי אלינו">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/services">שירותים</a></li>
+        <li><a href="/about">אודות</a></li>
+      </ul>
+      
+      <div class="nav-cta-container">
+        <li class="nav-cta-item">
+          <a href="/contact" class="nav-cta-btn">צרי קשר</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>שירותי הטיפול ההוליסטי שלי</h1>
+      <h3>מסע מותאם אישית לגילוי המהות שלך וליצירת חיים הרמוניים</h3>
+    </div>
+  </section>
+
+  <section class="services-intro">
+    <div class="container">
+      <p>הטיפול ההוליסטי גוף נפש ונשמה שלי מבוסס על הבנה עמוקה שכל אישה היא עולם שלם בפני עצמו. אין שני מסעות זהים, ולכן כל שירות מותאם אישית לצרכים, למטרות ולמסע הייחודי שלך. כמטפלת הוליסטית בישראל עם ניסיון רב שנים, אני מציעה מגוון שירותים שמשלבים טכניקות מסורתיות ומודרניות, כולם מכוונים למטרה אחת: לעזור לך למצוא את הדרך שלך לחיות בהרמוניה עם עצמך ועם העולם.</p>
+    </div>
+  </section>
+
+  <section class="services-detailed">
+    <div class="container">
+      <div class="service-detailed">
+        <div class="service-detailed-content">
+          <h2>טיפול אנרגטי מקיף</h2>
+          <p>הטיפול האנרגטי הוא אחד מאבני היסוד של הגישה ההוליסטית שלי. הגוף שלנו הוא מערכת אנרגטית מורכבת, ולעיתים קרובות חסימות אנרגטיות יכולות להוביל לבעיות פיזיות, רגשיות או רוחניות. בטיפול זה, אני עובדת על שחרור החסימות האלה והחזרת הזרימה הטבעית של האנרגיה בגוף.</p>
+          <p>הטיפול משלב טכניקות מרפואה סינית מסורתית, עבודה עם הצ'אקרות, וטכניקות אנרגטיות מודרניות. כל טיפול מותאם אישית לצרכים שלך, ויכול לכלול עבודה על נקודות אקופרסורה, איזון מרידיאנים, וטכניקות ריפוי אנרגטי מתקדמות.</p>
+          <ul class="service-benefits">
+            <li>שחרור מתחים פיזיים ורגשיים</li>
+            <li>שיפור זרימת האנרגיה בגוף</li>
+            <li>חיזוק המערכת החיסונית</li>
+            <li>הגברת תחושת החיוניות והאנרגיה</li>
+            <li>איזון הצ'אקרות והמרידיאנים</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-2" data-context="Holistic therapist performing energy healing treatment with hands hovering over client lying on massage table, surrounded by candles and crystals in peaceful treatment room" src="assets/service-service-2.webp" alt="מטפלת הוליסטית בישראל מבצעת טיפול אנרגטי" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed reverse">
+        <div class="service-detailed-content">
+          <h2>ריפוי רגשי ושחרור טראומות</h2>
+          <p>הרגשות שלנו הם מפתח להבנת עצמנו ולחיים הרמוניים. לעיתים קרובות, אנחנו נושאים איתנו פצעים רגשיים ישנים, דפוסים חוזרים, וטראומות שמשפיעות על כל תחומי החיים שלנו. הטיפול ההוליסטי גוף נפש ונשמה בתחום הריפוי הרגשי מתמקד בזיהוי, הבנה ושחרור של הכאבים האלה.</p>
+          <p>אני משתמשת בגישה עדינה ומכילה, שמאפשרת לך לעבוד בקצב שלך ובעומק שמתאים לך. הטיפול כולל טכניקות מעולם הפסיכולוגיה ההוליסטית, עבודה עם הגוף (שכן הגוף זוכר), ושיטות מתקדמות לשחרור טראומות ודפוסים רגשיים.</p>
+          <ul class="service-benefits">
+            <li>זיהוי והבנת דפוסים רגשיים</li>
+            <li>שחרור טראומות וכאבים ישנים</li>
+            <li>בניית חוסן רגשי</li>
+            <li>פיתוח מודעות רגשית</li>
+            <li>יצירת מרחב רגשי בריא</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-3" data-context="Woman in peaceful emotional release therapy session sitting comfortably with therapist in warm, safe environment with soft lighting and natural elements" src="assets/service-service-3.webp" alt="טיפול ריפוי רגשי בגישה הוליסטית" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed">
+        <div class="service-detailed-content">
+          <h2>חיבור נשמתי וגילוי המטרה</h2>
+          <p>אחד השאלות המרכזיות שמביאות נשים לטיפול הוא: "מה המטרה שלי? מה אני באמת צריכה לעשות בעולם הזה?" החיבור הנשמתי הוא מסע עמוק של גילוי המהות האמיתית שלך, ההבנה של התכלית הייחודית שלך, והחיבור למקור הפנימי שלך.</p>
+          <p>בטיפול זה, אנחנו עובדות יחד על פתיחת הערוצים הנשמתיים, חיבור לאינטואיציה, והבנה עמוקה של הדרך הרוחנית שלך. זהו טיפול שמתאים במיוחד לנשים שמרגישות שיש משהו יותר, שמחפשות משמעות עמוקה יותר בחיים שלהן.</p>
+          <ul class="service-benefits">
+            <li>גילוי המטרה הנשמתית שלך</li>
+            <li>חיבור לאינטואיציה והכוונה פנימית</li>
+            <li>פיתוח מודעות רוחנית</li>
+            <li>הבנת הדרך הייחודית שלך</li>
+            <li>חיבור למקור הפנימי והחוכמה העליונה</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-4" data-context="Spiritual meditation scene with woman in deep contemplation surrounded by sacred geometry, crystals, and ethereal light representing soul connection and purpose discovery" src="assets/service-service-4.webp" alt="חיבור נשמתי וגילוי מטרה בטיפול הוליסטי" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed reverse">
+        <div class="service-detailed-content">
+          <h2>טיפול בדפוסים חוזרים</h2>
+          <p>לעיתים קרובות, אנחנו מוצאות את עצמנו חוזרות על אותם דפוסים שוב ושוב - בזוגיות, בעבודה, ביחסים עם עצמנו. הדפוסים האלה לא מגיעים במקרה; הם נובעים מאמונות עמוקות, מחוויות ילדות, ומדפוסים משפחתיים שעוברים מדור לדור. הטיפול ההוליסטי בדפוסים חוזרים עוזר לזהות, להבין ולשחרר את הדפוסים האלה.</p>
+          <p>אנחנו עובדות יחד על הבנת השורשים של הדפוסים, על שחרור האמונות המגבילות שעומדות מאחוריהם, ועל יצירת דפוסים חדשים ובריאים יותר. זהו תהליך שדורש זמן וסבלנות, אבל התוצאות הן עמוקות ומשנות חיים.</p>
+          <ul class="service-benefits">
+            <li>זיהוי דפוסים חוזרים ושורשיהם</li>
+            <li>הבנת האמונות המגבילות</li>
+            <li>שחרור דפוסים משפחתיים</li>
+            <li>יצירת דפוסים חדשים ובריאים</li>
+            <li>פיתוח מודעות לבחירות שלך</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-5" data-context="Visual representation of breaking patterns with woman looking at mirror reflection showing transformation from old patterns to new possibilities with symbolic imagery" src="assets/service-service-5.webp" alt="טיפול בדפוסים חוזרים בגישה הוליסטית" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed">
+        <div class="service-detailed-content">
+          <h2>ייעוץ לחיים הרמוניים</h2>
+          <p>איך לחיות חיים הרמוניים? זו אחת השאלות החשובות ביותר שאנחנו יכולות לשאול את עצמנו. הייעוץ ההוליסטי שלי מתמקד בליווי מעמיק בתהליך של יצירת חיים מאוזנים, משמעותיים והרמוניים. זה לא רק על פתרון בעיות, אלא על יצירת חזון ברור של החיים שאת רוצה לחיות, ועל בניית הכלים והמודעות להגשים את החזון הזה.</p>
+          <p>הייעוץ כולל עבודה על כל תחומי החיים: יחסים, עבודה, בריאות, רוחניות, ויצירת איזון בין כל התחומים. אנחנו עובדות יחד על הבנת הערכים שלך, על יצירת מטרות ברורות, ועל בניית תוכנית פעולה מעשית להשגת החיים ההרמוניים שאת חולמת עליהם.</p>
+          <ul class="service-benefits">
+            <li>בניית חזון ברור לחיים שלך</li>
+            <li>איזון בין תחומי החיים השונים</li>
+            <li>פיתוח כלים מעשיים להרמוניה</li>
+            <li>הבנת הערכים והצרכים שלך</li>
+            <li>יצירת תוכנית פעולה אישית</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-6" data-context="Life coaching session with holistic approach showing woman and counselor working together with vision board, journals, and natural elements in bright, inspiring space" src="assets/service-service-6.webp" alt="ייעוץ הוליסטי לחיים הרמוניים" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed reverse">
+        <div class="service-detailed-content">
+          <h2>טיפול בחרדות ומתחים</h2>
+          <p>חרדה היא אחת הבעיות הנפוצות ביותר בעולם המודרני. היא יכולה להתבטא בדרכים רבות - מתחים פיזיים, מחשבות מטרידות, קושי בשינה, תחושת אי שקט מתמדת. הטיפול ההוליסטי גוף נפש ונשמה בחרדות ומתחים מתייחס לכל המימדים של הבעיה - הפיזי, הרגשי והנשמתי.</p>
+          <p>אנחנו עובדות יחד על זיהוי מקורות החרדה, על שחרור המתחים הפיזיים שנוצרים מהחרדה, ועל פיתוח כלים מעשיים להתמודדות. הטיפול כולל טכניקות הרפיה, עבודה נשימתית, מדיטציה מודרכת, ועבודה עמוקה על השורשים הרגשיים והנשמתיים של החרדה.</p>
+          <ul class="service-benefits">
+            <li>הפחתת חרדות ומתחים</li>
+            <li>שחרור מתחים פיזיים</li>
+            <li>פיתוח כלים להרגעה עצמית</li>
+            <li>שיפור איכות השינה</li>
+            <li>יצירת תחושת שלווה פנימית</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-7" data-context="Peaceful anxiety relief therapy with woman practicing breathing exercises in serene environment with calming colors, plants, and gentle natural light" src="assets/service-service-7.webp" alt="טיפול הוליסטי בחרדות ומתחים" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed">
+        <div class="service-detailed-content">
+          <h2>טיפול בקשיים בזוגיות</h2>
+          <p>יחסים הם אחד התחומים המאתגרים והמעשירים ביותר בחיים שלנו. קשיים בזוגיות יכולים להשפיע על כל תחומי החיים, ולעיתים קרובות הם משקפים דפוסים עמוקים יותר שצריכים טיפול. הגישה ההוליסטית שלי לטיפול בקשיים בזוגיות מתמקדת בעבודה אישית עמוקה, בהבנה שכדי ליצור יחסים בריאים, אנחנו צריכות קודם כל להיות בריאות ושלמות בעצמנו.</p>
+          <p>הטיפול כולל עבודה על דפוסי התקשורת שלך, על הבנת הצרכים והגבולות שלך, ועל שחרור דפוסים ישנים שמגיעים מהמשפחה המקורית או מיחסים קודמים. המטרה היא לעזור לך ליצור יחסים בריאים, מכבדים והרמוניים.</p>
+          <ul class="service-benefits">
+            <li>הבנת דפוסי התקשורת שלך</li>
+            <li>שחרור דפוסים ישנים ביחסים</li>
+            <li>פיתוח כלים לתקשורת בריאה</li>
+            <li>הבנת הצרכים והגבולות שלך</li>
+            <li>יצירת יחסים הרמוניים ומכבדים</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-8" data-context="Relationship healing therapy showing woman in contemplative state with symbolic imagery of connection, communication, and harmony in relationships" src="assets/service-service-8.webp" alt="טיפול הוליסטי בקשיים בזוגיות" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed reverse">
+        <div class="service-detailed-content">
+          <h2>טיפול במעברי חיים</h2>
+          <p>החיים שלנו מלאים במעברים - סיום מערכת יחסים, שינוי קריירה, מעבר לבית חדש, אובדן, או כל שינוי משמעותי אחר. מעברים אלה יכולים להיות מאתגרים ומלחיצים, אבל הם גם הזדמנות לצמיחה, להבנה עצמית, ולשינוי. הטיפול ההוליסטי במעברי חיים מלווה אותך בתהליך, ועוזר לך להפוך את המעבר להזדמנות לגילוי והתפתחות.</p>
+          <p>אנחנו עובדות יחד על הבנת המשמעות של המעבר, על שחרור הישן, ועל פתיחות לחדש. הטיפול כולל עבודה רגשית, תמיכה רוחנית, וכלים מעשיים לניווט במעבר בצורה בריאה והרמונית.</p>
+          <ul class="service-benefits">
+            <li>ליווי במעברי חיים משמעותיים</li>
+            <li>שחרור הישן ופתיחות לחדש</li>
+            <li>הבנת המשמעות של המעבר</li>
+            <li>כלים לניווט בשינויים</li>
+            <li>הפיכת המעבר להזדמנות לצמיחה</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-9" data-context="Life transition therapy showing woman at crossroads or threshold with symbolic imagery of transformation, new beginnings, and personal growth" src="assets/service-service-9.webp" alt="טיפול הוליסטי במעברי חיים" class="service-img">
+        </div>
+      </div>
+
+      <div class="service-detailed">
+        <div class="service-detailed-content">
+          <h2>סדנאות קבוצתיות</h2>
+          <p>בנוסף לטיפולים האישיים, אני מציעה גם סדנאות קבוצתיות שמתמקדות בנושאים שונים בתחום הטיפול ההוליסטי. הסדנאות מספקות מרחב בטוח ומכיל ללמידה, לחוויה משותפת, ולחיבור עם נשים אחרות שנמצאות במסע דומה. יש כוח עצום בעבודה קבוצתית - האנרגיה המשותפת, התמיכה ההדדית, והתובנות שמגיעות מהשיתוף עם אחרות.</p>
+          <p>הסדנאות משתנות לפי עונות השנה והצרכים של הקבוצה, ויכולות לכלול נושאים כמו: חיבור לנשיות, עבודה עם הירח והמחזוריות, מדיטציה ומיינדפולנס, ריפוי רגשי, ועוד. כל סדנה היא חוויה שלמה בפני עצמה, ומתאימה גם לנשים שמתחילות את המסע ההוליסטי שלהן.</p>
+          <ul class="service-benefits">
+            <li>למידה וחוויה בקבוצה תומכת</li>
+            <li>חיבור לנשים במסע דומה</li>
+            <li>כלים מעשיים לשימוש יומיומי</li>
+            <li>חוויה משותפת של צמיחה</li>
+            <li>אנרגיה קבוצתית מעצימה</li>
+          </ul>
+        </div>
+        <div class="service-detailed-image">
+          <img data-placeholder="service-10" data-context="Group holistic workshop with circle of women sitting together in meditation or discussion, surrounded by candles, crystals, and natural elements in welcoming space" src="assets/service-service-10.webp" alt="סדנאות קבוצתיות בטיפול הוליסטי" class="service-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <h2>איך נראה תהליך הטיפול?</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>פגישת היכרות</h3>
+          <p>נתחיל בשיחה מעמיקה שבה אני אכיר אותך, את המצב הנוכחי שלך, ואת המטרות שלך. זה המקום להבין מה מביא אותך לטיפול ומה את מקווה להשיג.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>בניית תוכנית אישית</h3>
+          <p>על בסיס השיחה שלנו, אבנה תוכנית טיפולית מותאמת אישית לך. התוכנית תכלול את סוגי הטיפולים המתאימים ביותר, את קצב המפגשים, ואת המטרות לטווח הקצר והארוך.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>תהליך הטיפול</h3>
+          <p>נתחיל בתהליך הטיפולי המותאם אישית. כל מפגש יכלול עבודה עמוקה על הנושאים שעולים, תרגילים ומשימות לבית, וליווי מתמשך לאורך כל הדרך.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>התאמות ושיפורים</h3>
+          <p>לאורך הדרך, נעריך יחד את ההתקדמות, נבצע התאמות בתוכנית הטיפולית לפי הצורך, ונוודא שהתהליך משרת את המטרות שלך בצורה הטובה ביותר.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <h2>מידע על מפגשים ותעריפים</h2>
+      <div class="pricing-info">
+        <p>כל מפגש טיפולי נמשך כשעה וחצי, ומתקיים במרחב פרטי ושקט שמאפשר עבודה עמוקה ומשמעותית. אני מאמינה שכל אישה ראויה לקבל את הטיפול שהיא צריכה, ולכן אני מציעה גמישות בתשלום ואפשרויות שונות להתאמה לצרכים האישיים שלך.</p>
+        <p>למידע מפורט על תעריפים, חבילות טיפול, ואפשרויות תשלום, אני מזמינה אותך ליצור איתי קשר. בשיחה הראשונה שלנו, נוכל לדבר גם על הצד המעשי ולמצוא את הפתרון המתאים ביותר עבורך.</p>
+        <a href="/contact" class="btn-primary">צרי קשר לפרטים נוספים</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>שאלות נפוצות</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>כמה זמן לוקח תהליך טיפולי?</h3>
+          <p>אין תשובה אחת לשאלה הזו, כי כל תהליך הוא אישי ויחודי. יש נשים שמרגישות שינוי משמעותי כבר אחרי מפגשים בודדים, ויש כאלה שבוחרות בתהליך ארוך יותר של מספר חודשים. בפגישת ההיכרות, נוכל לדבר על הציפיות שלך ולתכנן את התהליך בהתאם.</p>
+        </div>
+        <div class="faq-item">
+          <h3>האם הטיפול מתאים לי אם אני לא מכירה את עולם הטיפול ההוליסטי?</h3>
+          <p>בהחלט! הטיפול מתאים לכל אישה, ללא קשר לרקע או לניסיון קודם. אני מתחילה מהמקום שבו את נמצאת, ומתאימה את הטיפול לצרכים ולרמת הנוחות שלך. אין צורך בידע מוקדם או בהכנה מיוחדת.</p>
+        </div>
+        <div class="faq-item">
+          <h3>האם הטיפול ההוליסטי יכול להחליף טיפול רפואי?</h3>
+          <p>הטיפול ההוליסטי הוא משלים לטיפול רפואי, ולא מחליף אותו. אני ממליצה תמיד להמשיך בטיפול הרפואי הקיים, ולראות בטיפול ההוליסטי כתוספת שמחזקת ומעצימה את תהליך הריפוי הכללי שלך.</p>
+        </div>
+        <div class="faq-item">
+          <h3>איפה מתקיימים המפגשים?</h3>
+          <p>המפגשים מתקיימים במרחב פרטי ושקט שמאפשר עבודה עמוקה. בנוסף, אני מציעה גם מפגשים מקוונים לנשים שמעדיפות את הנוחות של הבית שלהן או שגרות רחוק. המפגשים המקוונים אפקטיביים בדיוק כמו מפגשים פנים אל פנים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>מוכנה להתחיל את המסע שלך?</h2>
+      <p>הצעד הראשון הוא הכי חשוב. בואי נפגש ונגלה יחד איזה שירות או שילוב של שירותים מתאים ביותר למסע שלך לחיים הרמוניים.</p>
+      <a href="/contact" class="btn-primary">צרי קשר עכשיו</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 תחת השם הפרטי. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="privacy.html" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="accessibility.html" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="terms.html" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות <a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = 'd8d270af-eed2-4657-8b44-d21b1a30007f';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          header.style.display = 'block';
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+    <script src="script.js"></script>
+</body></html>
