@@ -93,18 +93,21 @@ img {
 }
 
 :root {
-  --primary-color: #4a9d8f;
-  --secondary-color: #7ec8ba;
-  --accent-color: #f4a261;
-  --text-color: #2d3748;
+--primary-color: #0052CC;
+  --secondary-color: #E85D45;
+  --accent-color: #F59E0B;
+  --text-color: #4a4a4a;
   --light-text: #ffffff;
   --bg-white: #ffffff;
   --bg-light: #f7fafc;
   --bg-cream: #faf8f5;
   --nav-color: #2d3748;
-  --nav-hover-color: #4a9d8f;
+  --nav-hover-color: #0052CC;
   --shadow: 0 4px 12px rgba(0,0,0,0.08);
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+  --background-color: #FFFFFF;
+  --surface-color: #F8F9FA;
+  --text-secondary-color: #8c8c8c;
 }
 
 .container {
@@ -216,7 +219,7 @@ img {
 
 .nav-cta-btn {
   background: var(--primary-color);
-  color: var(--light-text);
+  color: #FFFFFF;
   padding: 10px 24px;
   border-radius: 25px;
   text-decoration: none;
@@ -228,8 +231,8 @@ img {
 }
 
 .nav-cta-btn:hover {
-  background: #3d8477;
-  border-color: #3d8477;
+  background: #0052CC;
+  border-color: #0052CC;
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
@@ -326,7 +329,7 @@ img {
     font-size: 24px;
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    background: #25d366;
+    background: #0052CC;
     color: white;
     text-decoration: none;
   }
@@ -505,8 +508,8 @@ section {
 }
 
 .btn-primary:hover {
-  background: #3d8477;
-  border-color: #3d8477;
+  background: #0052CC;
+  border-color: #0052CC;
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -926,7 +929,7 @@ section {
 .form-group textarea {
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #E5E7EB;
   border-radius: 8px;
   font-size: 16px;
   font-family: inherit;
@@ -971,7 +974,7 @@ section {
   display: flex;
   gap: 20px;
   padding: 20px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #E5E7EB;
 }
 
 .contact-info-item:last-child {
@@ -1102,7 +1105,7 @@ img, picture, figure {
 
     /* Legal Footer Styles - Header Colors */
     .legal-footer {
-      background-color: #f2f2f2;
+      background-color: #F8F9FA;
       color: #1a1a1a;
       padding: 20px 0;
       font-size: 16px;
@@ -1319,7 +1322,7 @@ img, picture, figure {
 /* Cookie Consent Customizations */
 :root {
   --cc-btn-primary-bg: #3b82f6;
-  --cc-btn-primary-border: #3b82f6;
+  --cc-btn-primary-border: #0052CC;
   --cc-btn-primary-hover-bg: #2269dd;
 }
 
@@ -1486,9 +1489,9 @@ img, picture, figure {
 #mic-access-tool-general-button svg line,
 #mic-access-tool-general-button svg polyline,
 #mic-access-tool-general-button svg g {
-  fill: #f2f2f2 !important;
-  stroke: #f2f2f2 !important;
-  color: #f2f2f2 !important;
+  fill: #F8F9FA !important;
+  stroke: #F8F9FA !important;
+  color: #F8F9FA !important;
 }
 
 /* Target images if the icon is an img instead of SVG */
@@ -1509,7 +1512,7 @@ img, picture, figure {
 .mic-access-tool-box-header,
 div[id*="mic-access-tool-box"] header,
 div[id*="mic-access-tool-box"] .header {
-  background: #f2f2f2 !important;
+  background: #F8F9FA !important;
   color: white !important;
 }
 
@@ -1536,8 +1539,8 @@ div[id*="mic-access-tool-box"] .header * {
 #mic-access-tool-box button:hover,
 div[id*="mic-access-tool-box"] button.active,
 div[id*="mic-access-tool-box"] button:hover {
-  border-color: #f2f2f2 !important;
-  color: #f2f2f2 !important;
+  border-color: #F8F9FA !important;
+  color: #F8F9FA !important;
   background-color: rgba(242, 242, 242, 0.1) !important;
 }
 
@@ -1546,7 +1549,7 @@ div[id*="mic-access-tool-box"] button:hover {
 #mic-access-tool-box button[title*="Reset"],
 #mic-access-tool-box [class*="reset"],
 div[id*="mic-access-tool-box"] button[class*="reset"] {
-  background: #f2f2f2 !important;
+  background: #F8F9FA !important;
   color: white !important;
 }
 
